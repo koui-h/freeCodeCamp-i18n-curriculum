@@ -1,0 +1,19 @@
+{
+  "name": "freeCodeCamp-i18n-curriculum",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "foxundermoon.shell-format",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/commandhistory,target=/commandhistory,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh"
+}

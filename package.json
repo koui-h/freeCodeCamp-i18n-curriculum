@@ -1,0 +1,27 @@
+{
+  "name": "i18n-curriculum",
+  "version": "0.0.1",
+  "description": "The translations for freeCodeCamp's curriculum",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeCodeCamp/i18n-curriculum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/i18n-curriculum/issues"
+  },
+  "homepage": "https://github.com/freeCodeCamp/i18n-curriculum#readme",
+  "author": "freeCodeCamp <team@freecodecamp.org>",
+  "main": "none",
+  "scripts": {
+    "test": "pnpm run test:shfmt && pnpm run test:shellcheck && pnpm run test:lint:md",
+    "test:shfmt": "shfmt ./scripts/lint/",
+    "test:shellcheck": "shellcheck ./scripts/lint/*.sh",
+    "test:lint:md": "bash ./scripts/lint/run-textlint.sh 'ja' all"
+  }
+}
