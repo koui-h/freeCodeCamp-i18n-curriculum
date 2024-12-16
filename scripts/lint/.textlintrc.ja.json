@@ -1,0 +1,32 @@
+{
+  "rules": {
+    "@textlint-ja/no-synonyms": true,
+    "ja-no-abusage": true,
+    "ja-no-orthographic-variants": true,
+    "ja-unnatural-alphabet": true,
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": {
+        "space": [
+          "alphabets"
+        ]
+      }
+    },
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowEmojiAtEnd": true,
+        "allowPeriodMarks": [
+          ":",
+          "："
+        ]
+      },
+      "no-exclamation-question-mark": false,
+      "sentence-length": {
+        "max": 200
+      }
+    },
+    "spellcheck-tech-word": true
+  },
+  "filters": {
+    "comments": true
+  }
+}

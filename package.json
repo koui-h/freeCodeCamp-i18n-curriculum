@@ -1,0 +1,43 @@
+{
+  "name": "i18n-curriculum",
+  "version": "0.0.1",
+  "description": "The translations for freeCodeCamp's curriculum",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeCodeCamp/i18n-curriculum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/i18n-curriculum/issues"
+  },
+  "homepage": "https://github.com/freeCodeCamp/i18n-curriculum#readme",
+  "author": "freeCodeCamp <team@freecodecamp.org>",
+  "main": "none",
+  "scripts": {
+    "test": "pnpm run test:shfmt && pnpm run test:shellcheck && pnpm run test:lint:md",
+    "test:shfmt": "shfmt ./scripts/lint/",
+    "test:shellcheck": "shellcheck ./scripts/lint/*.sh",
+    "test:lint:md": "bash ./scripts/lint/run-textlint.sh 'ja' all"
+  },
+  "devDependencies": {
+    "@textlint-ja/textlint-rule-no-synonyms": "^1.3.0",
+    "sudachi-synonyms-dictionary": "^14.0.0",
+    "textlint": "^14.4.0",
+    "textlint-filter-rule-allowlist": "^4.0.0",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-ja-no-abusage": "^3.0.0",
+    "textlint-rule-ja-no-orthographic-variants": "^2.0.0",
+    "textlint-rule-ja-unnatural-alphabet": "^2.0.1",
+    "textlint-rule-max-ten": "^5.0.0",
+    "textlint-rule-no-mix-dearu-desumasu": "^6.0.3",
+    "textlint-rule-preset-ja-spacing": "^2.4.3",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-sentence-length": "^5.2.0",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+  }
+}
