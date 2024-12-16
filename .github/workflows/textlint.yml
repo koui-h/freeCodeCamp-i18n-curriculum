@@ -22,4 +22,4 @@ jobs:
         with:
           node-version: '20'
       - run: pnpm install
-      - run: pnpm test
+      - run: pnpm run test:lint:md
