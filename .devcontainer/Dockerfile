@@ -10,21 +10,6 @@ RUN mkdir -p ${SHFMT_BIN_PATH} && \
     wget https://github.com/patrickvane/shfmt/releases/download/master/shfmt_linux_amd64 -O ${SHFMT_BIN_PATH}/shfmt && \
     chmod +x ${SHFMT_BIN_PATH}/shfmt
 
-RUN npm install -g textlint \
-    @textlint-ja/textlint-rule-no-synonyms \
-    textlint-filter-rule-allowlist \
-    textlint-filter-rule-comments \
-    textlint-rule-ja-no-abusage \
-    textlint-rule-ja-no-orthographic-variants \
-    textlint-rule-ja-unnatural-alphabet \
-    textlint-rule-no-mix-dearu-desumasu \
-    textlint-rule-max-ten \
-    textlint-rule-preset-ja-spacing \
-    textlint-rule-preset-ja-technical-writing \
-    textlint-rule-sentence-length \
-    textlint-rule-spellcheck-tech-word \
-    sudachi-synonyms-dictionary
-
 RUN mkdir -p /commandhistory && touch /commandhistory/.bash_history && chown -R node /commandhistory
 
 USER node
